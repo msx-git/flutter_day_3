@@ -50,33 +50,85 @@ class Page3 extends StatelessWidget {
                           width: 100,
                           height: 100,
                           decoration: const BoxDecoration(
-                            color: Colors.indigo,
-                            shape: BoxShape.circle,
-                          ),
+                              color: Colors.indigo,
+                              shape: BoxShape.circle,
+                              image: DecorationImage(
+                                  image:
+                                      AssetImage("assets/images/user.jpeg"))),
                         ),
 
                         /// Personal Info
-                        const Column(
+                        Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
+                            const Text(
                               "John Doe",
                               style: TextStyle(
                                   color: Colors.blue,
                                   fontWeight: FontWeight.w600,
                                   fontSize: 18),
                             ),
-                            SizedBox(height: 4),
-                            Text(
+                            const SizedBox(height: 4),
+                            const Text(
                               "UX Designer",
                               style: TextStyle(fontSize: 16),
                             ),
-                            SizedBox(height: 10),
+                            const SizedBox(height: 10),
                             Row(
                               children: [
-                                Icon(Icons.camera_rounded),
-                                Icon(Icons.bike_scooter_rounded),
-                                Icon(Icons.camera_rounded),
+                                Container(
+                                  padding: const EdgeInsets.all(2),
+                                  width: 30,
+                                  height: 30,
+                                  decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(8),
+                                      boxShadow: [
+                                        BoxShadow(
+                                            color:
+                                                Colors.grey.withOpacity(0.25),
+                                            blurRadius: 1,
+                                            spreadRadius: 1)
+                                      ]),
+                                  child:
+                                      Image.asset('assets/icons/dribble.png'),
+                                ),
+                                const SizedBox(width: 10),
+                                Container(
+                                  padding: const EdgeInsets.all(2),
+                                  width: 30,
+                                  height: 30,
+                                  decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(8),
+                                      boxShadow: [
+                                        BoxShadow(
+                                            color:
+                                                Colors.grey.withOpacity(0.25),
+                                            blurRadius: 1,
+                                            spreadRadius: 1)
+                                      ]),
+                                  child:
+                                      Image.asset('assets/icons/twitter.png'),
+                                ),
+                                const SizedBox(width: 10),
+                                Container(
+                                  padding: const EdgeInsets.all(2),
+                                  width: 30,
+                                  height: 30,
+                                  decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(8),
+                                      boxShadow: [
+                                        BoxShadow(
+                                            color:
+                                                Colors.grey.withOpacity(0.25),
+                                            blurRadius: 1,
+                                            spreadRadius: 1)
+                                      ]),
+                                  child:
+                                      Image.asset('assets/icons/linkedin.png'),
+                                ),
                               ],
                             )
                           ],
@@ -103,36 +155,51 @@ class Page3 extends StatelessWidget {
 
                     /// Interest
                     const Text("Interests"),
-                    Row(
-                      children: [
-                        Container(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 8, vertical: 4),
-                          margin: const EdgeInsets.only(right: 20),
-                          decoration: BoxDecoration(
-                              color: Colors.blue.withOpacity(0.15),
-                              borderRadius: BorderRadius.circular(10)),
-                          child: const Text("Trekking"),
-                        ),
-                        Container(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 8, vertical: 4),
-                          margin: const EdgeInsets.only(right: 20),
-                          decoration: BoxDecoration(
-                              color: Colors.blue.withOpacity(0.15),
-                              borderRadius: BorderRadius.circular(10)),
-                          child: const Text("Running"),
-                        ),
-                        Container(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 8, vertical: 4),
-                          margin: const EdgeInsets.only(right: 20),
-                          decoration: BoxDecoration(
-                              color: Colors.blue.withOpacity(0.15),
-                              borderRadius: BorderRadius.circular(10)),
-                          child: const Text("Coding"),
-                        ),
-                      ],
+                    const SizedBox(height: 6),
+                    SizedBox(
+                      height: 30,
+                      child: ListView(
+                        padding: EdgeInsets.zero,
+                        scrollDirection: Axis.horizontal,
+                        children: [
+                          Container(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 8, vertical: 4),
+                            margin: const EdgeInsets.only(right: 18),
+                            decoration: BoxDecoration(
+                                color: Colors.blue.withOpacity(0.15),
+                                borderRadius: BorderRadius.circular(10)),
+                            child: const Text("Dart 🎯"),
+                          ),
+                          Container(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 8, vertical: 4),
+                            margin: const EdgeInsets.only(right: 18),
+                            decoration: BoxDecoration(
+                                color: Colors.blue.withOpacity(0.15),
+                                borderRadius: BorderRadius.circular(10)),
+                            child: const Text("Swimming 🏊‍♀️"),
+                          ),
+                          Container(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 8, vertical: 4),
+                            margin: const EdgeInsets.only(right: 18),
+                            decoration: BoxDecoration(
+                                color: Colors.blue.withOpacity(0.15),
+                                borderRadius: BorderRadius.circular(10)),
+                            child: const Text("Running 🏃‍♂️"),
+                          ),
+                          Container(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 8, vertical: 4),
+                            margin: const EdgeInsets.only(right: 18),
+                            decoration: BoxDecoration(
+                                color: Colors.blue.withOpacity(0.15),
+                                borderRadius: BorderRadius.circular(10)),
+                            child: const Text("Coding 💻"),
+                          ),
+                        ],
+                      ),
                     )
                   ],
                 ),
@@ -153,14 +220,40 @@ class Page3 extends StatelessWidget {
                     ),
                   ],
                 ),
-                child: const Column(
+                child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Resume"),
-                    Divider(),
+                    const Text(
+                      "Resume",
+                      style:
+                          TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
+                    ),
+                    const Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [Text("John Doe CV"), Icon(Icons.download)],
+                      children: [
+                        const Text(
+                          "📄 John Doe CV",
+                          style: TextStyle(fontSize: 16),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.all(2),
+                          width: 30,
+                          height: 30,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(8),
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Colors.grey.withOpacity(0.25),
+                                    blurRadius: 1,
+                                    spreadRadius: 1)
+                              ]),
+                          child: const Icon(
+                              CupertinoIcons.arrow_down_to_line_alt,
+                              color: Colors.blue),
+                        ),
+                      ],
                     ),
                   ],
                 ),
@@ -186,14 +279,19 @@ class Page3 extends StatelessWidget {
                   children: [
                     const Text("Experience"),
                     const Divider(),
+
                     /// Experience - 1
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        const Text("Business Name"),
+                        const Text(
+                          "📬 Business Name",
+                          style: TextStyle(
+                              fontSize: 16, fontWeight: FontWeight.w500),
+                        ),
                         Container(
                           padding: const EdgeInsets.symmetric(
-                              horizontal: 8, vertical: 4),
+                              horizontal: 8, vertical: 8),
                           decoration: BoxDecoration(
                               color: Colors.blue.withOpacity(0.15),
                               borderRadius: BorderRadius.circular(10)),
@@ -204,32 +302,62 @@ class Page3 extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const Padding(
-                      padding: EdgeInsets.only(left: 20.0),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20.0),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            "UX/UI Designer",
+                          const Text(
+                            "💼 UX/UI Designer",
                             style: TextStyle(fontWeight: FontWeight.w500),
                           ),
+                          const SizedBox(height: 6),
                           Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Icon(Icons.check),
-                              Expanded(
+                              Container(
+                                height: 15,
+                                width: 15,
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    border: Border.all(color: Colors.blue),
+                                    shape: BoxShape.circle),
+                                child: const Center(
+                                    child: Icon(
+                                  Icons.check,
+                                  size: 11,
+                                  color: Colors.blue,
+                                )),
+                              ),
+                              const SizedBox(width: 5),
+                              const Expanded(
                                 child: Text(
-                                    "Lerom ipsum gsodfs fdso fsind dfsn sjfdf fdsoio adosf adfsinf jka  fsiodn sdifm fdsinfgs"),
+                                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint commodi"),
                               ),
                             ],
                           ),
+                          const SizedBox(height: 5),
                           Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Icon(Icons.check),
-                              Expanded(
+                              Container(
+                                height: 15,
+                                width: 15,
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    border: Border.all(color: Colors.blue),
+                                    shape: BoxShape.circle),
+                                child: const Center(
+                                    child: Icon(
+                                  Icons.check,
+                                  size: 11,
+                                  color: Colors.blue,
+                                )),
+                              ),
+                              const SizedBox(width: 5),
+                              const Expanded(
                                 child: Text(
-                                    "Lerom ipsum gsodfs fdso fsind dfsn sjfdf fdsoio adosf adfsinf jka  fsiodn sdifm fdsinfgs"),
+                                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint commodi repudiandae consequuntur voluptatum"),
                               ),
                             ],
                           ),
@@ -241,7 +369,7 @@ class Page3 extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        const Text("Business Name"),
+                        const Text("📈 Business Name"),
                         Container(
                           padding: const EdgeInsets.symmetric(
                               horizontal: 8, vertical: 4),
@@ -255,22 +383,37 @@ class Page3 extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const Padding(
-                      padding: EdgeInsets.only(left: 20.0),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20.0),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            "UX/UI Researcher",
+                          const Text(
+                            "💼 UX/UI Researcher",
                             style: TextStyle(fontWeight: FontWeight.w500),
                           ),
+                          const SizedBox(height: 6),
                           Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Icon(Icons.check),
-                              Expanded(
+                              Container(
+                                height: 15,
+                                width: 15,
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    border: Border.all(color: Colors.blue),
+                                    shape: BoxShape.circle),
+                                child: const Center(
+                                    child: Icon(
+                                  Icons.check,
+                                  size: 11,
+                                  color: Colors.blue,
+                                )),
+                              ),
+                              const SizedBox(width: 5),
+                              const Expanded(
                                 child: Text(
-                                    "Lerom ipsum gsodfs fdso fsind dfsn sjfdf fdsoio adosf adfsinf jka  fsiodn sdifm fdsinfgs"),
+                                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint commodi repudiandae consequuntur voluptatum"),
                               ),
                             ],
                           ),

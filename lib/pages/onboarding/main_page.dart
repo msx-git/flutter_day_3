@@ -19,7 +19,7 @@ class OnBoarding extends StatelessWidget {
       ),
       body: ListView(
         padding: const EdgeInsets.all(20),
-        children: const [
+        children:  [
           NavigateToButton(pageName: "1. Weather-1", page: Page1()),
           NavigateToButton(pageName: "2. Weather-2", page: Page2()),
           NavigateToButton(pageName: "3. Resume", page: Page3()),

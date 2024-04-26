@@ -41,57 +41,57 @@ class Page5 extends StatelessWidget {
           const SizedBox(width: 20),
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(25.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(height: 15),
-            Container(
-              height: 280,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: Colors.indigo,
-                borderRadius: BorderRadius.circular(25),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(25.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(height: 15),
+              Container(
+                height: 280,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  // color: Colors.indigo,
+                  borderRadius: BorderRadius.circular(25),
+                  image: DecorationImage(image: AssetImage('assets/images/student.jpeg'),fit: BoxFit.cover)
+                ),
               ),
-            ),
-            const SizedBox(height: 30),
-            const Text(
-              "English for Beginner",
-              style: TextStyle(
-                  color: Colors.indigo,
-                  fontWeight: FontWeight.w500,
-                  fontSize: 20),
-            ),
-            const SizedBox(height: 20),
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                InfoCube(data: 24, label: "Chapter"),
-                InfoCube(data: 12, label: "Exam"),
-                InfoCube(data: 5, label: "Rewards"),
-              ],
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-            const SizedBox(
-                height: 40,
-                child: Text(
-                  "About Course",
-                  style: TextStyle(
-                      color: Colors.indigo,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 16),
-                )),
-            const Text(
-              "sfdfsgdadg affas dsfa dff afds fad adf adfd  dffdsa sfgdfaadf sfd gdavs "
-              "sfdfsgdadg affas dsfa dff afds fad adf adfd  dffdsa sfgdfaadf sfd gdavs "
-              "sfdfsgdadg affas dsfa dff afds fad adf adfd  dffdsa \n\nsfgdfaadf sfd gdavs "
-              "sfdfsgdadg affas dsfa dff afds fad adf adfd  dffdsa sfgdfaadf sfd gdavs",
-              style: TextStyle(color: Colors.indigoAccent),
-            ),
-          ],
+              const SizedBox(height: 30),
+              const Text(
+                "English for Beginner",
+                style: TextStyle(
+                    color: Colors.indigo,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 20),
+              ),
+              const SizedBox(height: 20),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  InfoCube(data: 24, label: "Chapter"),
+                  InfoCube(data: 12, label: "Exam"),
+                  InfoCube(data: 5, label: "Rewards"),
+                ],
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              const SizedBox(
+                  height: 40,
+                  child: Text(
+                    "About Course",
+                    style: TextStyle(
+                        color: Colors.indigo,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 16),
+                  )),
+              const Text(
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborumnumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. \n\n Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut!",
+                style: TextStyle(color: Colors.indigoAccent),
+              ),
+            ],
+          ),
         ),
       ),
     );
