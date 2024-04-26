@@ -10,19 +10,23 @@ class Page4 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Uyga vazifa',
+          'Homework',
           style: TextStyle(
               fontWeight: FontWeight.w600,
-              color: Color(0xff17146c),
+              color: Color(0xff1c188a),
               fontSize: 24),
         ),
         centerTitle: true,
         leadingWidth: 70,
         leading: IconButton(
           onPressed: () {},
-          icon: const Icon(Icons.arrow_back_ios_new, size: 16),
+          icon: const Icon(
+            Icons.arrow_back_ios_new,
+            size: 16,
+            color: Colors.indigo,
+          ),
           style: IconButton.styleFrom(
-            side: BorderSide(color: Colors.black.withOpacity(0.3)),
+            side: BorderSide(color: Colors.indigo.withOpacity(0.3)),
           ),
         ),
         actions: [
@@ -32,10 +36,9 @@ class Page4 extends StatelessWidget {
             icon: const Icon(CupertinoIcons.ellipsis),
             style: IconButton.styleFrom(
                 side: BorderSide(
-              color: Colors.black.withOpacity(0.3),
+              color: Colors.indigo.withOpacity(0.3),
             )),
-            iconSize: 20,
-            color: Colors.black54,
+            color: Colors.indigo,
           ),
           const SizedBox(width: 20),
         ],
